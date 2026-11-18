@@ -1,0 +1,17 @@
+{
+  "name": "redessociais",
+  "version": "1.0.0",
+  "description": "Cliente Node.js para publicação automática via Postiz self-hosted",
+  "type": "module",
+  "main": "postiz.js",
+  "scripts": {
+    "post-text": "node examples/post-text.js",
+    "post-image": "node examples/post-image.js",
+    "post-video": "node examples/post-video.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "form-data": "^4.0.0",
+    "dotenv": "^16.4.0"
+  }
+}
