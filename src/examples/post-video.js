@@ -16,20 +16,20 @@ const result = await client.postNow({
     'ID_DA_INTEGRACAO_INSTAGRAM',
     'ID_DA_INTEGRACAO_YOUTUBE'
   ],
-  text: 'Descrição do vídeo com #hashtags relevantes 🎬',
+  text: 'Descriçêo do vídeo com #hashtags relevantes 🎬',
   mediaIds: [media.id]
 })
 
 console.log('Vídeo publicado:', result)
 
-// Exemplo de agendamento para amanhã às 10h:
+// Exemplo de agendamento para amanhê às 10h:
 // const amanha = new Date()
 // amanha.setDate(amanha.getDate() + 1)
 // amanha.setHours(10, 0, 0, 0)
 //
 // const agendado = await client.schedulePost({
 //   integrationIds: ['ID_DA_INTEGRACAO_TIKTOK'],
-//   text: 'Post agendado para amanhã!',
+//   text: 'Post agendado para amanhê!',
 //   mediaIds: [media.id],
 //   date: amanha
 // })

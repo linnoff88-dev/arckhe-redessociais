@@ -1,13 +1,13 @@
-# Relatório: APIs de Publicação em Redes Sociais
+# Relatório: APIs de Publicaçêo em Redes Sociais
 
 **Data:** Fevereiro 2026
 
 ---
 
-## Solução Escolhida
+## Soluçêo Escolhida
 
 **Postiz self-hosted** (open source, AGPL-3.0) via Docker Compose.
-Publicação via **API REST + Node.js**.
+Publicaçêo via **API REST + Node.js**.
 
 - GitHub: https://github.com/gitroomhq/postiz-app
 - Docs: https://docs.postiz.com
@@ -20,11 +20,11 @@ Publicação via **API REST + Node.js**.
 | Rede | Tipo de Conteúdo | Observações |
 |---|---|---|
 | Instagram | Imagem, Vídeo, Reels, Carrossel | Requer Meta App |
-| TikTok | Vídeo | Exige aprovação para posts públicos |
+| TikTok | Vídeo | Exige aprovaçêo para posts públicos |
 | Facebook | Texto, Imagem, Vídeo | Mesmo app do Instagram (Meta) |
 | YouTube | Vídeo longo e Shorts | Exige auditoria para posts públicos automáticos |
 | X (Twitter) | Texto, Imagem, Vídeo | Free: 500 posts/mês |
-| LinkedIn | Texto, Imagem, Vídeo | Requer aprovação do app |
+| LinkedIn | Texto, Imagem, Vídeo | Requer aprovaçêo do app |
 | + 13 outras | Pinterest, Reddit, Threads, Bluesky, Mastodon, Discord, Slack, Telegram, etc. | |
 
 ---
@@ -47,7 +47,7 @@ Publicação via **API REST + Node.js**.
 ### Instagram + Facebook
 - **API:** Meta Graph API v22.0
 - **App:** https://developers.facebook.com
-- **Mídia:** URL pública obrigatória (não aceita upload direto)
+- **Mídia:** URL pública obrigatória (nêo aceita upload direto)
 - **Conta:** Business ou Creator obrigatório
 - **SDK Node.js:** `fb`, chamadas axios diretas
 - **Limite:** 100 posts/24h, JPEG apenas para imagens
@@ -56,13 +56,13 @@ Publicação via **API REST + Node.js**.
 - **API:** TikTok Content Posting API
 - **App:** https://developers.tiktok.com
 - **Mídia:** URL pública ou upload chunked
-- **Sem aprovação:** posts ficam privados (`SELF_ONLY`)
+- **Sem aprovaçêo:** posts ficam privados (`SELF_ONLY`)
 - **Limite:** 6 req/min por access_token
 
 ### YouTube
 - **API:** YouTube Data API v3
 - **App:** Google Cloud Console
-- **Mídia:** Upload direto obrigatório (não aceita URL externa)
+- **Mídia:** Upload direto obrigatório (nêo aceita URL externa)
 - **Cota:** 10.000 unidades/dia (~6 uploads/dia)
 - **SDK Node.js:** `googleapis` (oficial Google)
 
@@ -76,9 +76,9 @@ Publicação via **API REST + Node.js**.
 ### LinkedIn
 - **API:** LinkedIn Posts API
 - **App:** https://developer.linkedin.com
-- **Produto:** "Share on LinkedIn" (requer aprovação)
+- **Produto:** "Share on LinkedIn" (requer aprovaçêo)
 - **Mídia:** Upload direto obrigatório
-- **Token:** Expira em 60 dias (requer renovação OAuth)
+- **Token:** Expira em 60 dias (requer renovaçêo OAuth)
 
 ---
 
@@ -87,9 +87,9 @@ Publicação via **API REST + Node.js**.
 | Rede | Texto | Imagem | Vídeo |
 |---|---|---|---|
 | Instagram | Via legenda | URL pública HTTPS | URL pública ou upload |
-| TikTok | Via descrição | ❌ (só carrossel foto) | URL ou upload chunked |
+| TikTok | Via descriçêo | ❌ (só carrossel foto) | URL ou upload chunked |
 | Facebook | Direto na API | URL ou upload binário | URL ou upload chunked |
-| YouTube | Título + descrição | ❌ (thumbnail separado) | **Upload binário obrigatório** |
+| YouTube | Título + descriçêo | ❌ (thumbnail separado) | **Upload binário obrigatório** |
 | X (Twitter) | Direto na API | Upload binário → media_id | Upload chunked → media_id |
 | LinkedIn | Direto na API | Upload em 2 etapas | Upload em 3 etapas |
 
@@ -101,7 +101,7 @@ Publicação via **API REST + Node.js**.
 redessociais/
 ├── docker-compose.yml     # Postiz + PostgreSQL + Redis
 ├── .env.example           # Template de variáveis
-├── .env                   # Variáveis reais (não comitar)
+├── .env                   # Variáveis reais (nêo comitar)
 ├── .gitignore
 ├── doc/
 │   └── relatorio-redes-sociais-apis.md
@@ -122,7 +122,7 @@ redessociais/
 2. `docker compose up -d`
 3. Acessar http://localhost:4007 e criar conta admin
 4. Configurações → API Key → copiar a chave
-5. Conectar cada rede social pelo painel (botão OAuth)
+5. Conectar cada rede social pelo painel (botêo OAuth)
 6. `cd src && npm install`
 7. Substituir `COLE_SUA_API_KEY_AQUI` e os IDs nos exemplos
 8. `node examples/post-text.js` para testar
@@ -143,7 +143,7 @@ redessociais/
 
 ## Limitações Importantes
 
-- **TikTok:** sem aprovação do app, posts ficam privados
+- **TikTok:** sem aprovaçêo do app, posts ficam privados
 - **YouTube:** cota de ~6 uploads/dia; posts automáticos públicos exigem auditoria do Google
 - **X Free:** apenas 500 posts/mês
 - **LinkedIn:** token expira em 60 dias

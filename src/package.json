@@ -1,7 +1,7 @@
 {
   "name": "redessociais",
   "version": "1.0.0",
-  "description": "Cliente Node.js para publicação automática via Postiz self-hosted",
+  "description": "Cliente Node.js para publicaçêo automática via Postiz self-hosted",
   "type": "module",
   "main": "postiz.js",
   "scripts": {

@@ -68,12 +68,12 @@ export class PostizClient {
   }
 
   /**
-   * Agenda publicação para uma data futura.
+   * Agenda publicaçêo para uma data futura.
    * @param {object} options
    * @param {string[]} options.integrationIds - IDs das integrações (redes)
    * @param {string} options.text - Texto/legenda do post
    * @param {string[]} [options.mediaIds] - IDs de mídias já enviadas via uploadMedia()
-   * @param {string|Date} options.date - Data/hora de publicação (ISO 8601)
+   * @param {string|Date} options.date - Data/hora de publicaçêo (ISO 8601)
    */
   async schedulePost({ integrationIds, text, mediaIds = [], date }) {
     const posts = integrationIds.map(id => ({
