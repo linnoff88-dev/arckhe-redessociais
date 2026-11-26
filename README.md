@@ -92,7 +92,7 @@ redessociais/
 ### 1. Clonar o repositêÂ³rio
 
 ```bash
-git clone https://github.com/inematds/redessociais.git
+git clone https://github.com/linnoff88-dev/redessociais.git
 cd redessociais
 ```
 
